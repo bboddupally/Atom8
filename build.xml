@@ -1,0 +1,103 @@
+<project name="verify-demo" default="run-tests" basedir=".">
+	
+	<property file="${basedir}/GAME-APP-Util.properties"/>
+	<property name="test.build.dir" value="bin"/>
+	<property name="test.src.dir" value="src" />
+	<property name="testng.report.dir" value="${basedir}/test-output" />
+	<property name="test.suite.dir" value="suite" />
+	
+    <tstamp> 
+         <format  property = "ReportsTime"  pattern ="-HH-mm-ss_yyyy-MM-dd"/> 
+     </tstamp> 
+	<path id="classpath">
+		<pathelement location="${basedir}\lib\testng-6.8.jar"/>
+		<pathelement location="${basedir}\lib\saxon-8.7.jar"/>
+		<pathelement location="${basedir}\lib\selenium-server-standalone-2.42.2.jar"/>
+		<pathelement location="${basedir}\lib\testng.jar"/>
+	
+	</path>
+		
+	<target name="run">
+		<antcall target="compile-tests"/>
+		<antcall target="run-tests"/>
+	
+	</target>
+		
+	<target name="compile-tests">
+		<!-- remove and create classes dir -->
+
+		<delete dir="${basedir}/ScreenShot">
+		</delete>
+		<delete dir="${basedir}/test-output">
+				</delete>
+		
+		<mkdir dir="${basedir}/ScreenShot">
+		</mkdir>
+		<delete dir="${test.build.dir}" />
+		<mkdir dir="${test.build.dir}" />
+		<!-- compile tests -->
+		<javac classpathref="classpath"
+			srcdir="${test.src.dir}"
+			destdir="${test.build.dir}" 
+			debug="true" 
+			includeantruntime="true"/>
+	</target>
+	
+	<path id="testNgpath" >
+		<pathelement location="${basedir}\lib\testng-6.8.jar"/>
+		<pathelement location="${basedir}\lib\testng.jar"/>
+	</path>
+
+
+	<taskdef resource="testngtasks" classpathref="testNgpath" />
+	<path id="runpath">
+		<path refid="classpath"/>
+		<path location="config" />
+		<pathelement location="${test.build.dir}"/>
+	</path>
+	
+
+	
+	<target name="run-tests" depends="compile-tests">
+
+	<testng classpathref="runpath" useDefaultListeners="true"   outputdir="${testng.report.dir}">
+			<xmlfileset dir="${test.suite.dir}" includes="${ant-suitename}"/>
+		</testng>
+
+		<delete dir="${basedir}/testng-xslt">
+		</delete>
+		<mkdir dir="${basedir}/testng-xslt">
+		</mkdir>
+		<mkdir dir="${basedir}/testng-xslt/ScreenShot">
+		</mkdir>
+		<xslt in="${basedir}/test-output/testng-results.xml" style="${basedir}/testng-results.xsl" out="${basedir}/testng-xslt/index.html">
+			<param expression="${basedir}/testng-xslt/" name="testNgXslt.outputDir" />
+			<param expression="true" name="testNgXslt.sortTestCaseLinks" />
+			<param expression="FAIL,SKIP,PASS,CONF,BY_CLASS" name="testNgXslt.testDetailsFilter" />
+			<param expression="true" name="testNgXslt.showRuntimeTotals" />
+			<classpath refid="runpath">
+			</classpath>
+		</xslt>
+		
+		<copy todir="${basedir}/testng-xslt/ScreenShot" >
+			<fileset dir="${basedir}/ScreenShot" includes="**"/>
+		</copy>
+
+		<mkdir dir="${basedir}/test-output/ScreenShot">
+				</mkdir>
+		<copy todir="${basedir}/test-output/ScreenShot" >
+					<fileset dir="${basedir}/ScreenShot" includes="**"/>
+				</copy>
+		
+		<copy file="${testng.report.dir}/emailable-report.html" todir="${basedir}/testng-xslt"/>
+
+	
+		
+		
+	</target>
+	
+
+
+
+	
+</project>
