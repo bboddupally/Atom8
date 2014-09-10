@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" verbose="1" preserve-order="true">
+
+
+ <parameter name="browser" value="firefox"/>
+  <parameter name="localhost" value="false"/>
+	<test name="BeforeAppEx" preserve-order="true">
+		<classes>
+			<class name="com.gtech.suite.BeforeAppEx"/>
+		</classes>
+	</test>
+
+
+	<test name="SignIN_GMS" preserve-order="true">
+<!-- <groups>
+			<dependencies>
+			
+		<group name="Independent" 		depends-on="gmssignIn" />	
+		<group name="smokeTest" 		depends-on="abuseNik" />
+		<group name="closeBrowser" 	depends-on="smokeTest" />
+		
+			</dependencies>
+			<run>
+				<include name="abuseNik" />
+				<include name="smokeTest" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+ -->
+<classes>
+		
+	
+		<!-- 	<class name="com.gtech.gms.testcases.LoginGMS"/>
+		<methods>
+				<include name="gms_SignIn"/>
+				<include name="gms_addAbuseNickName"/>
+				<include name="gms_SignOut"/>
+			
+			</methods>
+			 -->
+			 
+			 
+			<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+ 				<include name="p_Reg_play_for_Free" invocation-numbers="6" />
+			
+			
+<!-- 				<include name="p_Combinations_step1_reg" invocation-numbers="6"/>
+ -->				
+				
+			
+			</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	
+</suite>
+<!-- Suite -->
