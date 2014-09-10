@@ -42,11 +42,10 @@
 			 
 			<class name="com.gtech.portal.testcase.Portal">
 			<methods>
- 				<include name="p_Reg_play_for_Free" invocation-numbers="6" />
-			
-			
-<!-- 				<include name="p_Combinations_step1_reg" invocation-numbers="6"/>
- -->				
+ 			<include name="p_Reg_play_for_Free"/>
+				<include name="p_Combinations_step1_reg"/>
+				
+					
 				
 			
 			</methods>
