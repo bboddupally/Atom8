@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <suite name="Suite" verbose="1" preserve-order="true">
-
-
- <parameter name="browser" value="firefox"/>
+ <parameter name="browser" value="chrome"/>
   <parameter name="localhost" value="false"/>
+
+
 	<test name="BeforeAppEx" preserve-order="true">
+	
+	
 		<classes>
 			<class name="com.gtech.suite.BeforeAppEx"/>
 		</classes>
@@ -42,7 +44,7 @@
 			 
 			<class name="com.gtech.portal.testcase.Portal">
 			<methods>
- 			<include name="p_Reg_play_for_Free" invocation-numbers="0"/>
+ 			<include name="p_Combinations_step1_reg"/>
 <!-- 				<include name="p_Combinations_step1_reg"/>
  -->
 			</methods>
