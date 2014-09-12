@@ -9,7 +9,8 @@
 	<path id="classpath">
 		<pathelement location="${basedir}\lib\testng-6.8.jar"/>
 		<pathelement location="${basedir}\lib\selenium-server-standalone-2.42.2.jar"/>
-	
+		<pathelement location="${basedir}\lib\SaxonLiaison.jar"/>
+
 	</path>
 		
 	<target name="run">
