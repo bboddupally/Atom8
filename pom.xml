@@ -15,6 +15,14 @@
 	<version>8.7</version>
 </dependency>
 
+<dependency>
+	<groupId>net.sf.saxon</groupId>
+	<artifactId>Saxon-HE</artifactId>
+	<version>9.4</version>
+</dependency>
+
+
+
 
 
 		<dependency>
@@ -112,7 +120,12 @@
 	</dependencies>
 
 
-
+<pluginRepositories>
+        <pluginRepository>
+            <id>testng-xslt-plugin</id>
+            <url>http://www.cosminaru.ro/maven/</url>
+        </pluginRepository>
+    </pluginRepositories>
 
 
 	<repositories>
@@ -164,7 +177,7 @@
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.17</version>
-				<configuration>
+			<configuration>
 
 
 					<properties>
@@ -245,7 +258,28 @@
 
 	<!-- <properties> <suiteFile>src/test/resources/testng.xml</suiteFile> <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
 		</properties> -->
+		
+<!-- <reporting>
 
+
+
+        <plugins>
+            <plugin>
+                <groupId>org.testng.xslt</groupId>
+                <artifactId>testng-xslt-plugin</artifactId>
+                <version>1.1</version>
+               <configuration>
+                    Setting the output directory
+                    <outputDir>${project.basedir}/target/site/${pom.artifactId}</outputDir>
+                    Setting the testNgXslt.showRuntimeTotals flag
+                    <showRuntimeTotals>true</showRuntimeTotals>
+                    Setting the testNgXslt.cssFile parameter. This should be relative to the '${basedir}/target/site/testng-xslt' directory
+                    <sortTestCaseLinks>true</sortTestCaseLinks>
+                    <testDetailsFilter>FAIL,PASS,SKIP,CONF</testDetailsFilter>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting> -->
 
 
 </project>

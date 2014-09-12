@@ -8,7 +8,6 @@
      </tstamp> 
 	<path id="classpath">
 		<pathelement location="${basedir}\lib\testng-6.8.jar"/>
-		<pathelement location="${basedir}\lib\saxon-8.7.jar"/>
 		<pathelement location="${basedir}\lib\selenium-server-standalone-2.42.2.jar"/>
 	
 	</path>
@@ -44,7 +43,7 @@
 		</mkdir>
 		<mkdir dir="${basedir}/testng-xslt/ScreenShot">
 		</mkdir>
-		<xslt in="${basedir}/target/surefire-reports/testng-results.xml" style="${basedir}/testng-results.xsl" out="${basedir}/testng-xslt/index.html">
+		<xslt in="${basedir}/target/surefire-reports/testng-results.xml" style="${basedir}/testng-results.xsl" out="${basedir}/testng-xslt/index.html" processor="SaxonLiaison">
 			<param expression="${basedir}/testng-xslt/" name="testNgXslt.outputDir" />
 			<param expression="true" name="testNgXslt.sortTestCaseLinks" />
 			<param expression="FAIL,SKIP,PASS,CONF,BY_CLASS" name="testNgXslt.testDetailsFilter" />
