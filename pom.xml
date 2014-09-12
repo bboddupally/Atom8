@@ -90,7 +90,16 @@
 			<scope>system</scope>
 			<systemPath>${basedir}/lib/reaper1.1.jar</systemPath>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>LIB_NAME1</groupId>
+			<artifactId>LIB_NAM1E</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/SaxonLiaison.jar</systemPath>
+		</dependency>
+		
+	
 		<dependency>
 			<groupId>xml-apis</groupId>
 			<artifactId>xml-apis</artifactId>
