@@ -9,6 +9,14 @@
 
 	<dependencies>
 
+<dependency>
+	<groupId>net.sf.saxon</groupId>
+	<artifactId>saxon</artifactId>
+	<version>8.7</version>
+</dependency>
+
+
+
 		<dependency>
 			<groupId>net.sourceforge.jexcelapi</groupId>
 			<artifactId>jxl</artifactId>
@@ -117,9 +125,6 @@
 
 
 	<build>
-
-
-
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -226,7 +231,6 @@
 			</plugin>
 
 
-
 			<!-- <plugin> <groupId>org.reportyng</groupId> <artifactId>reporty-ng</artifactId> 
 				<version>1.2</version> <configuration> Output directory for the testng xslt 
 				report <outputdir>/target/testng-xslt-report/index.html</outputdir> <sorttestcaselinks>true</sorttestcaselinks> 
@@ -235,6 +239,7 @@
 
 
 		</plugins>
+		
 	</build>
 
 
