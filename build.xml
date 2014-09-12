@@ -53,8 +53,8 @@
 			</classpath>
 		</xslt>
 		
-		<copy todir="${basedir}/testng-xslt/ScreenShot" >
-			<fileset dir="${basedir}/ScreenShot" includes="**"/>
+		<copy todir="${basedir}/testng-xslt/Screenshot" >
+			<fileset dir="${basedir}/src/test/resources/Screenshot" includes="**"/>
 		</copy>
 
 		<mkdir dir="${basedir}/test-output/ScreenShot">
