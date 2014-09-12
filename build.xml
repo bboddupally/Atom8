@@ -1,10 +1,7 @@
 <project name="verify-demo" default="run-tests" basedir=".">
 	
-	<property file="${basedir}/GAME-APP-Util.properties"/>
-	<property name="test.build.dir" value="bin"/>
-	<property name="test.src.dir" value="src" />
+	
 	<property name="testng.report.dir" value="${basedir}/test-output" />
-	<property name="test.suite.dir" value="suite" />
 	
     <tstamp> 
          <format  property = "ReportsTime"  pattern ="-HH-mm-ss_yyyy-MM-dd"/> 
@@ -13,39 +10,18 @@
 		<pathelement location="${basedir}\lib\testng-6.8.jar"/>
 		<pathelement location="${basedir}\lib\saxon-8.7.jar"/>
 		<pathelement location="${basedir}\lib\selenium-server-standalone-2.42.2.jar"/>
-		<pathelement location="${basedir}\lib\testng.jar"/>
 	
 	</path>
 		
 	<target name="run">
-		<antcall target="compile-tests"/>
 		<antcall target="run-tests"/>
 	
 	</target>
 		
-	<target name="compile-tests">
-		<!-- remove and create classes dir -->
 
-		<delete dir="${basedir}/ScreenShot">
-		</delete>
-		<delete dir="${basedir}/test-output">
-				</delete>
-		
-		<mkdir dir="${basedir}/ScreenShot">
-		</mkdir>
-		<delete dir="${test.build.dir}" />
-		<mkdir dir="${test.build.dir}" />
-		<!-- compile tests -->
-		<javac classpathref="classpath"
-			srcdir="${test.src.dir}"
-			destdir="${test.build.dir}" 
-			debug="true" 
-			includeantruntime="true"/>
-	</target>
 	
 	<path id="testNgpath" >
 		<pathelement location="${basedir}\lib\testng-6.8.jar"/>
-		<pathelement location="${basedir}\lib\testng.jar"/>
 	</path>
 
 
@@ -58,11 +34,9 @@
 	
 
 	
-	<target name="run-tests" depends="compile-tests">
+	<target name="run-tests" >
 
-	<testng classpathref="runpath" useDefaultListeners="true"   outputdir="${testng.report.dir}">
-			<xmlfileset dir="${test.suite.dir}" includes="${ant-suitename}"/>
-		</testng>
+	
 
 		<delete dir="${basedir}/testng-xslt">
 		</delete>
