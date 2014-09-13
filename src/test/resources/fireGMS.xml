@@ -44,7 +44,7 @@
 			 
 			<class name="com.gtech.portal.testcase.Portal">
 			<methods>
- 			<include name="p_Combinations_step1_reg"/>
+ 			<include name="p_Combinations_step1_reg" invocation-numbers="0"/>
 <!-- 				<include name="p_Combinations_step1_reg"/>
  -->
 			</methods>
