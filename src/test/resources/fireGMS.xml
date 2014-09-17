@@ -14,45 +14,151 @@
 
 
 	<test name="SignIN_GMS" preserve-order="true">
-<!-- <groups>
-			<dependencies>
-			
-		<group name="Independent" 		depends-on="gmssignIn" />	
-		<group name="smokeTest" 		depends-on="abuseNik" />
-		<group name="closeBrowser" 	depends-on="smokeTest" />
-		
-			</dependencies>
-			<run>
-				<include name="abuseNik" />
-				<include name="smokeTest" />
-				<include name="closeBrowser" />
-			</run>
-</groups>
- -->
+
 <classes>
-		
-	
-		<!-- 	<class name="com.gtech.gms.testcases.LoginGMS"/>
-		<methods>
-				<include name="gms_SignIn"/>
-				<include name="gms_addAbuseNickName"/>
-				<include name="gms_SignOut"/>
-			
-			</methods>
-			 -->
-			 
-			 
+ 
 			<class name="com.gtech.portal.testcase.Portal">
 			<methods>
- 			<include name="p_Combinations_step1_reg"/>
-<!-- 			<include name="p_Reg_play_for_Free"/>
- --> 
+ 			<include name="p_Combinations_step1_reg" invocation-numbers="7"/>
+
 			</methods>
 			</class>
 		</classes>
 	</test>
 	
+<!-- 	<test name="SignIN_GMS1" preserve-order="true">
+
+<classes>
+ 
+			<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+ 			<include name="p_Combinations_step1_reg" invocation-numbers="7"/>
+
+			</methods>
+			</class>
+		</classes>
+	</test>
 	
-	
+	<test name="SignIN_GMS2" preserve-order="true">
+
+<classes>
+ 
+			<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+ 			<include name="p_Combinations_step1_reg" invocation-numbers="7"/>
+
+			</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="SignIN_GMS3" preserve-order="true">
+
+<classes>
+ 
+			<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+ 			<include name="p_Combinations_step1_reg" invocation-numbers="7"/>
+
+			</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="SignIN_GMS4" preserve-order="true">
+
+<classes>
+ 
+			<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+ 			<include name="p_Combinations_step1_reg" invocation-numbers="7"/>
+
+			</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="SignIN_GMS5" preserve-order="true">
+
+<classes>
+ 
+			<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+ 			<include name="p_Combinations_step1_reg" invocation-numbers="7"/>
+
+			</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="SignIN_GMS6" preserve-order="true">
+
+<classes>
+ 
+			<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+ 			<include name="p_Combinations_step1_reg" invocation-numbers="7"/>
+
+			</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="SignIN_GMS7" preserve-order="true">
+
+<classes>
+ 
+			<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+ 			<include name="p_Combinations_step1_reg" invocation-numbers="7"/>
+
+			</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="SignIN_GMS8" preserve-order="true">
+
+<classes>
+ 
+			<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+ 			<include name="p_Combinations_step1_reg" invocation-numbers="7"/>
+
+			</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="SignIN_GMS9" preserve-order="true">
+
+<classes>
+ 
+			<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+ 			<include name="p_Combinations_step1_reg" invocation-numbers="7"/>
+
+			</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="SignIN_GMS10" preserve-order="true">
+
+<classes>
+ 
+			<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+ 			<include name="p_Combinations_step1_reg" invocation-numbers="7"/>
+
+			</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="SignIN_GMS11" preserve-order="true">
+
+<classes>
+ 
+			<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+ 			<include name="p_Combinations_step1_reg" invocation-numbers="7"/>
+
+			</methods>
+			</class>
+		</classes>
+	</test> -->
+
 </suite>
 <!-- Suite -->
