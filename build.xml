@@ -55,7 +55,7 @@
 		</xslt>
 		
 		<copy todir="${basedir}/testng-xslt/ScreenShot" >
-			<fileset dir="${basedir}/ScreenShot" includes="**"/>
+			<fileset dir="${basedir}/src/test/resources/Screenshot" includes="**"/>
 		</copy>
 
 		<mkdir dir="${basedir}/test-output/ScreenShot">
