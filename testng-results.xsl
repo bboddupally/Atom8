@@ -261,7 +261,7 @@
             <title>
              <xsl:value-of select="f:getProperty('reports-header')"/>
           </title>
-            <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+            <meta http-equiv="content-type" content="text/html; charset=UTF8"/>
             <meta http-equiv="pragma" content="no-cache"/>
             <meta http-equiv="cache-control" content="max-age=0"/>
             <meta http-equiv="cache-control" content="no-cache"/>

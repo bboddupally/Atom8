@@ -10,7 +10,6 @@
 		<pathelement location="${basedir}\lib\testng-6.8.jar"/>
 		<pathelement location="${basedir}\lib\saxon-8.7.jar"/>
 		<pathelement location="${basedir}\lib\selenium-server-standalone-2.42.2.jar"/>
-		<pathelement location="${basedir}\lib\testng.jar"/>
 	
 	</path>
 		

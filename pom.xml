@@ -88,7 +88,7 @@
 			<artifactId>LIB_NAME</artifactId>
 			<version>1.0.0</version>
 			<scope>system</scope>
-			<systemPath>${basedir}/lib/reaper1.1.jar</systemPath>
+			<systemPath>${basedir}/lib/reaper1.4.jar</systemPath>
 		</dependency>
 		
 		<dependency>
@@ -125,14 +125,17 @@
 			<version>0.1</version>
 			<scope>test</scope>
 		</dependency>
+		
+	
+		
 
 	</dependencies>
 
 
 <pluginRepositories>
         <pluginRepository>
-            <id>testng-xslt-plugin</id>
-            <url>http://www.cosminaru.ro/maven/</url>
+            <id>project.local</id>
+            <url>file:${basedir}/lib</url>
         </pluginRepository>
     </pluginRepositories>
 
@@ -210,13 +213,14 @@
 
 					<systemPropertyVariables>
 			<application.properties>src/test/resources/Games-APP-Util.properties</application.properties>
-            <propertyName>${browser}</propertyName>
-             <propertyName>${localhost}</propertyName>
+         <!--    <propertyName>${browser}</propertyName>
+             <propertyName>${localhost}</propertyName> -->
             
 					</systemPropertyVariables>
 					<suiteXmlFiles>
 						<suiteXmlFile>${testsuite}</suiteXmlFile>
-<!-- 						<suiteXmlFile>src/test/resources/fireGMS.xml</suiteXmlFile>
+						
+<!--  <suiteXmlFile>src/test/resources/fireGMS_SW.xml</suiteXmlFile>
  -->
 					</suiteXmlFiles>
 
@@ -263,6 +267,31 @@
 		</plugins>
 		
 	</build>
+
+
+
+<reporting>
+        <plugins>
+            <plugin>
+                <groupId>project.local</groupId>
+                <artifactId>testng-xslt-plugin</artifactId>
+                <configuration>
+                    <outputDir>/target/testng-xslt-report</outputDir>
+                    <showRuntimeTotals>true</showRuntimeTotals>
+                    <sortTestCaseLinks>true</sortTestCaseLinks>
+                    <testDetailsFilter>FAIL,PASS,SKIP,CONF</testDetailsFilter>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+
+
+
+
+
+
+
+
 
 
 	<!-- <properties> <suiteFile>src/test/resources/testng.xml</suiteFile> <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<suite name="Suite" verbose="1" preserve-order="true">
+ <parameter name="browser" value="chrome"/>
+  <parameter name="localhost" value="false"/>
+
+
+	<test name="BeforeAppEx" preserve-order="true">
+	
+	
+		<classes>
+			<class name="com.gtech.suite.BeforeAppEx"/>
+		</classes>
+	</test>
+
+
+<!--  	<test name="Caliberswe" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+
+<classes>
+				<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="0"/>
+			
+ 
+			</methods>
+			</class>
+		</classes>
+	</test> -->
+
+	<test name="Lycke" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="4"/>
+			
+ 
+			</methods>
+			</class>
+		</classes>
+</test>
+	<test name="Happybingo" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="5"/>
+			
+ 
+			</methods>
+			</class>
+		</classes>
+</test>
+	<test name="Balletbingoswe" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="6"/>
+			
+ 
+			</methods>
+			</class>
+		</classes>
+</test>
+	
+	<test name="Hallen_Sv_Iw" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="8"/>
+			
+ 
+			</methods>
+			</class>
+		</classes>
+</test>
+	
+	<test name="Royalgamesswe" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="12"/>
+			
+ 
+			</methods>
+			</class>
+		</classes>
+</test>
+
+	
+</suite>
+<!-- Suite -->
