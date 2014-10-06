@@ -4,18 +4,23 @@ import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.util.LinkedHashMap;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.beust.jcommander.Parameter;
 import com.gtech.portal.scripts.Portal_Scripts;
 import com.gtech.util.DataSource;
+import com.gtech.util.Util4Modules;
 
 public class Portal {
 	
 // all 96 test cases of portal
-	
-	
+	Util4Modules autoutil=null;
+
 	Portal_Scripts scripts   = null;
 	DataSource dd = new DataSource();
 
@@ -41,7 +46,7 @@ public class Portal {
 	
 	
 	
-	@DataProvider
+	@DataProvider(parallel=true)
 	public Object[][] DataProvider4Iterations(Method m){
 		Object[][] object =null;
 		object =dd.dataDrive4Iteration(m.getName());
@@ -49,17 +54,19 @@ public class Portal {
 	}
 	
 	
-
+	
 	
 
-	@Test(dataProvider="DataProvider4Iterations" ,groups = { "smokeTest" ,"Independent"})
+	@Test(dataProvider="DataProvider4Iterations" ,groups = { "smokeTest" ,"Independent"}, threadPoolSize=15)
 	public void p_Combinations_step1_reg(
 			LinkedHashMap<String, LinkedHashMap<String, String>> Credentials) {
-getInstance();scripts.p_Combinations_step1_reg(  Credentials);
+		getInstance();scripts.p_Combinations_step1_reg( Credentials);
 		
 	}
 
-	@Test(dataProvider="DataProvider4Iterations")
+
+	
+	@Test(dataProvider="DataProvider4Iterations" ,groups = { "smokeTest" ,"Independent"}, threadPoolSize=15)
 	public void p_Reg_play_for_Free(
 			LinkedHashMap<String, LinkedHashMap<String, String>> Credentials) throws MalformedURLException {
 getInstance();scripts.p_Reg_play_for_Free(Credentials);

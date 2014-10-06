@@ -61,7 +61,7 @@
 			</class>
 		</classes>
 </test>
-	<test name="Happybingo" preserve-order="true">
+	<!-- <test name="Happybingo" preserve-order="true">
 <groups>
 			<dependencies>
 		<group name="Independent" 		depends-on="openBrowser" />	
@@ -155,7 +155,7 @@
 			</class>
 		</classes>
 </test>
-
+ -->
 	
 </suite>
 <!-- Suite -->
