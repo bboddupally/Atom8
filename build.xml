@@ -1,7 +1,7 @@
 <project name="verify-demo" default="run-tests" basedir=".">
 	
 	
-	<property name="testng.report.dir" value="${basedir}/test-output" />
+	<property name="testng.report.dir" value="${basedir}/target/surefire-reports" />
 	
     <tstamp> 
          <format  property = "ReportsTime"  pattern ="-HH-mm-ss_yyyy-MM-dd"/> 

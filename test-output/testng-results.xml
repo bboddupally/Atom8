@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="1" failed="0" total="1" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="22082" started-at="2014-10-01T11:11:35Z" finished-at="2014-10-01T11:11:57Z">
+    <groups>
+      <group name="Independent">
+        <method signature="Portal.p_Combinations_step1_reg(java.util.LinkedHashMap)[pri:0, instance:com.gtech.portal.testcase.Portal@581de498]" name="p_Combinations_step1_reg" class="com.gtech.portal.testcase.Portal"/>
+      </group> <!-- Independent -->
+      <group name="smokeTest">
+        <method signature="Portal.p_Combinations_step1_reg(java.util.LinkedHashMap)[pri:0, instance:com.gtech.portal.testcase.Portal@581de498]" name="p_Combinations_step1_reg" class="com.gtech.portal.testcase.Portal"/>
+      </group> <!-- smokeTest -->
+    </groups>
+    <test name="BeforeAppEx" duration-ms="4" started-at="2014-10-01T11:11:35Z" finished-at="2014-10-01T11:11:35Z">
+    </test> <!-- BeforeAppEx -->
+    <test name="SignIN_GMS3" duration-ms="22060" started-at="2014-10-01T11:11:35Z" finished-at="2014-10-01T11:11:57Z">
+      <class name="com.gtech.suite.BeforeAppEx">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String, java.lang.String)[pri:0, instance:com.gtech.suite.BeforeAppEx@1d96f4b5]" name="beforeSuite" is-config="true" duration-ms="533" started-at="2014-10-01T16:41:35Z" finished-at="2014-10-01T16:41:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.gtech.suite.BeforeAppEx@1d96f4b5]" name="afterSuite" is-config="true" duration-ms="1" started-at="2014-10-01T16:41:57Z" finished-at="2014-10-01T16:41:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.gtech.suite.BeforeAppEx -->
+      <class name="com.gtech.portal.testcase.Portal">
+        <test-method status="FAIL" signature="beforeClass()[pri:0, instance:com.gtech.portal.testcase.Portal@581de498]" name="beforeClass" is-config="true" duration-ms="0" started-at="2014-10-01T16:41:35Z" finished-at="2014-10-01T16:41:35Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Error forwarding the new session cannot find : Capabilities [{platform=ANY, browserName=firefox, version=}]
+Command duration or timeout: 381 milliseconds
+Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
+System info: host: 'SPBDDEV035', ip: '172.17.251.100', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_34'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Error forwarding the new session cannot find : Capabilities [{platform=ANY, browserName=firefox, version=}]
+Command duration or timeout: 381 milliseconds
+Build info: version: '2.42.2', revision: '6a6995d31c7c56c340d6f45a76976d43506cd6cc', time: '2014-06-03 10:52:47'
+System info: host: 'SPBDDEV035', ip: '172.17.251.100', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_34'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:240)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:126)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:153)
+	at com.gtech.util.SelectingWebDriver.getInstance(SelectingWebDriver.java:28)
+	at com.gtech.portal.scripts.Portal_Scripts.<init>(Portal_Scripts.java:26)
+	at com.gtech.portal.testcase.Portal.beforeClass(Portal.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.grid.common.exception.GridException: Error forwarding the new session cannot find : Capabilities [{platform=ANY, browserName=firefox, version=}]
+	at org.openqa.grid.web.servlet.handler.RequestHandler.process(RequestHandler.java:114)
+	at org.openqa.grid.web.servlet.DriverServlet.process(DriverServlet.java:83)
+	at org.openqa.grid.web.servlet.DriverServlet.doPost(DriverServlet.java:67)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.seleniumhq.jetty7.servlet.ServletHolder.handle(ServletHolder.java:565)
+	at org.seleniumhq.jetty7.servlet.ServletHandler.doHandle(ServletHandler.java:479)
+	at org.seleniumhq.jetty7.server.session.SessionHandler.doHandle(SessionHandler.java:225)
+	at org.seleniumhq.jetty7.server.handler.ContextHandler.doHandle(ContextHandler.java:1031)
+	at org.seleniumhq.jetty7.servlet.ServletHandler.doScope(ServletHandler.java:406)
+	at org.seleniumhq.jetty7.server.session.SessionHandler.doScope(SessionHandler.java:186)
+	at org.seleniumhq.jetty7.server.handler.ContextHandler.doScope(ContextHandler.java:965)
+	at org.seleniumhq.jetty7.server.handler.ScopedHandler.handle(ScopedHandler.java:117)
+	at org.seleniumhq.jetty7.server.handler.HandlerWrapper.handle(HandlerWrapper.java:111)
+	at org.seleniumhq.jetty7.server.Server.handle(Server.java:349)
+	at org.seleniumhq.jetty7.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:452)
+	at org.seleniumhq.jetty7.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:47)
+	at org.seleniumhq.jetty7.server.AbstractHttpConnection.content(AbstractHttpConnection.java:894)
+	at org.seleniumhq.jetty7.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:948)
+	at org.seleniumhq.jetty7.http.HttpParser.parseNext(HttpParser.java:857)
+	at org.seleniumhq.jetty7.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.seleniumhq.jetty7.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:66)
+	at org.seleniumhq.jetty7.server.bio.SocketConnector$ConnectorEndPoint.run(SocketConnector.java:254)
+	at org.seleniumhq.jetty7.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:599)
+	at org.seleniumhq.jetty7.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:534)
+	at java.lang.Thread.run(Thread.java:662)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="p_Combinations_step1_reg(java.util.LinkedHashMap)[pri:0, instance:com.gtech.portal.testcase.Portal@581de498]" name="p_Combinations_step1_reg" duration-ms="3" started-at="2014-10-01T16:41:57Z" data-provider="DataProvider4Iterations" finished-at="2014-10-01T16:41:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{parameters={app=Club3000bingo}, field={First name=catbhupeshy, Last name=catsharma, Mobile=798789797877, Password=password, Post Code=545345, Security answer=petshsh, Street=fgdg, House nr=4354353, City=hyderabad, Promo code=fdfsdf, Telephone=98798897987}, dropdown={Country=UNITED KINGDOM, Gender=Male, Security question=Where did you go to school?, How did you hear about us=Friend, Nationality=UNITED KINGDOM, Language=English}, date={month=Jul, day=5, year=1984}, button={sign=Sign Up Here, pla4Real=Play for real}, url={url=http://www.club3000livebingo.com/content/club3000bingo/en.html}, checkbox={18=*Confirm you are over 18 years, accept=I Accept the, keepmeUpdayed=Keep me updated with news}, toolbar={header1=BALANCE:}, select2={Post Code=545345}, label2={Telephone=798789797877}, field2={Login name=b, Email=catbhup9@gmail.com, Nickname=s, First name=ca, Last name=ma}}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- p_Combinations_step1_reg -->
+      </class> <!-- com.gtech.portal.testcase.Portal -->
+    </test> <!-- SignIN_GMS3 -->
+  </suite> <!-- Suite -->
+</testng-results>

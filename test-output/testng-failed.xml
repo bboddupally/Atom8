@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <parameter name="browser" value="firefox"/>
+  <parameter name="localhost" value="false"/>
+  <test name="SignIN_GMS3(failed)">
+    <classes>
+      <class name="com.gtech.suite.BeforeAppEx">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- com.gtech.suite.BeforeAppEx -->
+      <class name="com.gtech.portal.testcase.Portal">
+        <methods>
+          <include name="p_Combinations_step1_reg"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.gtech.portal.testcase.Portal -->
+    </classes>
+  </test> <!-- SignIN_GMS3(failed) -->
+</suite> <!-- Failed suite [Suite] -->
