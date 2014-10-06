@@ -54,7 +54,7 @@
 			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
 				<class name="com.gtech.portal.testcase.Portal">
 			<methods>
-          <include name="p_Combinations_step1_reg" invocation-numbers="4"/>
+          <include name="p_Combinations_step1_reg" invocation-numbers="0"/>
 			
  
 			</methods>
