@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<suite name="testMulti" verbose="1" >
+ 
+  <suite-files>
+   <suite-file path="./fireGMS_EN.xml" />
+   <suite-file path="./fireGMS_SW.xml" />
+  </suite-files>
+ 
+</suite>
+<!-- Suite -->

@@ -1,4 +1,4 @@
-package com.gtech.portal.testcase;
+package com.gtech.portal.testcases;
 
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
@@ -60,7 +60,10 @@ public class Portal {
 	@Test(dataProvider="DataProvider4Iterations" ,groups = { "smokeTest" ,"Independent"}, threadPoolSize=15)
 	public void p_Combinations_step1_reg(
 			LinkedHashMap<String, LinkedHashMap<String, String>> Credentials) {
-		getInstance();scripts.p_Combinations_step1_reg( Credentials);
+		getInstance();
+		
+		//System.out.println(Credentials);
+		scripts.p_Combinations_step1_reg( Credentials);
 		
 	}
 
@@ -80,6 +83,26 @@ getInstance();scripts.p_Reg_play_for_Real(Credentials);
 		
 	}
 
+	
+	
+	@Test(dataProvider="DataProvider4Iterations")
+	public void p_Reg_play_Payments(
+			LinkedHashMap<String, LinkedHashMap<String, String>> Credentials) {
+getInstance();scripts.p_Reg_play_Payments(Credentials);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	@Test(dataProvider="DataProvider")
 	public void p_All_fields_error_messages(
 			LinkedHashMap<String, LinkedHashMap<String, String>> Credentials) {

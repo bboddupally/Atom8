@@ -1,0 +1,802 @@
+<html xmlns:math="http://exslt.org/math" xmlns:testng="http://testng.org"
+      xmlns:f="Functions">
+   <head>
+      <title>Smoke suite Results</title>
+      <meta http-equiv="content-type" content="text/html; charset=UTF8"></meta>
+      <meta http-equiv="pragma" content="no-cache"></meta>
+      <meta http-equiv="cache-control" content="max-age=0"></meta>
+      <meta http-equiv="cache-control" content="no-cache"></meta>
+      <meta http-equiv="cache-control" content="no-store"></meta>
+      <LINK rel="stylesheet" href="style.css"></LINK>
+      <script type="text/javascript" src="main.js"></script>
+   </head>
+   <body>
+      <table width="100%" style="font-size: 16px; margin-bottom: 10px;" cellspacing="1">
+         <tr>
+            <td width="100%">
+               Test case
+               
+               <b>Express_failed Scenario</b>
+            </td>
+            <td style="background-color: #ff4500; padding: 3px 3px 3px 0;" align="center">
+               <div style="width: 50px;">1</div>
+            </td>
+            <td style="background-color: #c2fb4e; padding: 3px 3px 3px 0;" align="center">
+               <div style="width: 50px;">4</div>
+            </td>
+            <td style="background-color: #FFFFBB; padding: 3px 3px 3px 0;" align="center">
+               <div style="width: 50px;">0</div>
+            </td>
+            <td align="center" style="background-color: #eaf0f7; padding: 3px 3px 3px 0;">
+               <div style="width: 50px;">5</div>
+            </td>
+            <td align="center"
+                style="font-weight: bold; background-color: #eaf0f7; padding: 3px 3px 3px 0;">
+               <div style="width: 50px;">80%</div>
+            </td>
+            <td style="background-color: #eaf0f7; padding: 3px 3px 3px 0;" align="center"
+                nowrap="true">3m
+               28s
+               
+            </td>
+         </tr>
+      </table>
+      <div style="width: 200px;">
+         <label for="groupMethodsCheckBox" style="font-weight: bold; margin: 0;">
+            <input id="groupMethodsCheckBox" type="checkbox" onclick="switchTestMethodsView(this)"
+                   checked=""></input>
+            Group by class
+            
+         </label>
+         <br></br>
+         <label for="methodsFilter_ALL" style="font-weight: bold; margin: 0;">
+            <input id="methodsFilter_ALL" type="checkbox"
+                   onclick="testMethodsFilterChanged(this, 'ALL')"
+                   checked=""></input>
+            All
+            
+         </label>
+      </div>
+      <label for="methodsFilter_FAIL" style="margin-left: 20px;">
+         <input id="methodsFilter_FAIL" type="checkbox"
+                onclick="testMethodsFilterChanged(this, 'FAIL')"
+                checked=""></input>
+         Failed
+         
+      </label>
+      <label for="methodsFilter_PASS">
+         <input id="methodsFilter_PASS" type="checkbox"
+                onclick="testMethodsFilterChanged(this, 'PASS')"
+                checked=""></input>
+         Passed
+         
+      </label>
+      <label for="methodsFilter_SKIP">
+         <input id="methodsFilter_SKIP" type="checkbox"
+                onclick="testMethodsFilterChanged(this, 'SKIP')"
+                checked=""></input>
+         Skipped
+         
+      </label>
+      <label for="methodsFilter_CONF">
+         <input id="methodsFilter_CONF" type="checkbox"
+                onclick="testMethodsFilterChanged(this, 'CONF')"
+                checked=""></input>
+         Config
+         
+      </label>
+      <br></br>
+      <div id="testMethodsByStatus" style="display: none;">
+         <table class="testMethodsTable" cellpadding="0" cellspacing="0">
+            <tr class="methodsTableHeader">
+               <td width="100%">Name</td>
+               <td nowrap="true">Started</td>
+               <td nowrap="true">Duration</td>
+               <td>Exception</td>
+            </tr>
+            <tr id="com.gtech.portal.testcases.Portal_p_Combinations_step1_reg_byStatus_failed_FAIL1_row"
+                class="testMethodStatusFAIL">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.gtech.portal.testcases.Portal_p_Combinations_step1_reg_byStatus_failed_FAIL1_details')">p_Combinations_step1_reg</a>
+               </td>
+               <td nowrap="true">15:58:22</td>
+               <td nowrap="true" align="right">2m
+                  24s
+                  
+               </td>
+               <td nowrap="true">
+                  <a onclick="toggleDetailsVisibility('com.gtech.portal.testcases.Portal_p_Combinations_step1_reg_byStatus_failed_FAIL1_exception')">
+                     expected [Promo rrrrcode] but found [null]
+                     
+                  </a>
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.gtech.portal.testcases.Portal_p_Combinations_step1_reg_byStatus_failed_FAIL1_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Parameters: </b>
+                        
+                        {parameters={app=Express}, field={Mobile=798789797877, Password=password, Post Code=5LMTYQRI, Security answer=petshsh, Street=fgdg,
+                        House nr=4354353, City=hyderabad, Promo rrrrcode=fdfsdf, Telephone=79363928412, Login name=MRT_KIBMME, Email=MRT_HTEWEIbhup9@gmail.com,
+                        Nickname=MRT_BWMFBNIs, First name=MRT_IAEDNca, Last name=MRT_NEAAma}, dropdown={Country=UNITED KINGDOM, Gender=Male, Security
+                        question=Where did you go to school?, How did you hear about us=Friend, Nationality=UNITED KINGDOM}, date={month=Jul, day=3,
+                        year=1916}, button={sign=Sign Up Here, pla4Real=Play for real}, url={url=https://www.dailyexpressgames.co.uk/content/express/en.html},
+                        checkbox={18=*Confirm you are over 18 years, accept=I Accept the, keepmeUpdayed=Keep me updated with news}}
+                        
+                        
+                     </div>
+                     <div>
+                        <b>Start time: </b>15:58:22
+                     </div>
+                     <div>
+                        <b>End time: </b>16:00:46
+                     </div>
+                     <div>
+                        <b>Duration: </b>2m
+                        24s
+                        
+                     </div>
+                     <div>
+                        <b>Depends on groups:
+                           
+                        </b>
+                        <div>
+                               -
+                           openBrowser
+                        </div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.gtech.portal.testcases.Portal_p_Combinations_step1_reg_byStatus_failed_FAIL1_exception"
+                       class="testMethodDetails">
+                     <pre style="padding: 5px; margin: 0;">expected [Promo rrrrcode] but found [null]</pre>
+                  </div>
+               </td>
+            </tr>
+            <tr id="com.gtech.portal.testcases.Login_game_DepositAccount_byStatus_passed_PASS1_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.gtech.portal.testcases.Login_game_DepositAccount_byStatus_passed_PASS1_details')">game_DepositAccount</a>
+               </td>
+               <td nowrap="true">16:00:46</td>
+               <td nowrap="true" align="right">31s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.gtech.portal.testcases.Login_game_DepositAccount_byStatus_passed_PASS1_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Parameters: </b>
+                        
+                        {button={account=My account, DAccount=Deposit Funds}, hyperlink={home=Bingo}}
+                        
+                        
+                     </div>
+                     <div>
+                        <b>Start time: </b>16:00:46
+                     </div>
+                     <div>
+                        <b>End time: </b>16:01:17
+                     </div>
+                     <div>
+                        <b>Duration: </b>31s
+                        
+                     </div>
+                     <div>
+                        <b>Depends on groups:
+                           
+                        </b>
+                        <div>
+                               -
+                           openBrowser
+                        </div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="com.gtech.portal.testcases.Login_game_SignOut_byStatus_passed_PASS2_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.gtech.portal.testcases.Login_game_SignOut_byStatus_passed_PASS2_details')">game_SignOut</a>
+               </td>
+               <td nowrap="true">16:01:17</td>
+               <td nowrap="true" align="right">20s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.gtech.portal.testcases.Login_game_SignOut_byStatus_passed_PASS2_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Parameters: </b>
+                        
+                        {button={logout=Logout}, hyperlink={home=Bingo}}
+                        
+                        
+                     </div>
+                     <div>
+                        <b>Start time: </b>16:01:17
+                     </div>
+                     <div>
+                        <b>End time: </b>16:01:37
+                     </div>
+                     <div>
+                        <b>Duration: </b>20s
+                        
+                     </div>
+                     <div>
+                        <b>Depends on groups:
+                           
+                        </b>
+                        <div>
+                               -
+                           openBrowser
+                        </div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="com.gtech.suite.BeforeAppEx_beforeSuite_byStatus_passed_PASS3_row"
+                class="testMethodStatusPASS testMethodStatusCONF">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.gtech.suite.BeforeAppEx_beforeSuite_byStatus_passed_PASS3_details')">beforeSuite</a>
+               </td>
+               <td nowrap="true">15:58:11</td>
+               <td nowrap="true" align="right">920 ms
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.gtech.suite.BeforeAppEx_beforeSuite_byStatus_passed_PASS3_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Parameters: </b>
+                        
+                        false
+                        
+                        ,
+                        
+                        chrome
+                        
+                        
+                     </div>
+                     <div>
+                        <b>Start time: </b>15:58:11
+                     </div>
+                     <div>
+                        <b>End time: </b>15:58:11
+                     </div>
+                     <div>
+                        <b>Duration: </b>920 ms
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="com.gtech.suite.BeforeAppEx_afterSuite_byStatus_passed_PASS4_row"
+                class="testMethodStatusPASS testMethodStatusCONF">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.gtech.suite.BeforeAppEx_afterSuite_byStatus_passed_PASS4_details')">afterSuite</a>
+               </td>
+               <td nowrap="true">16:01:39</td>
+               <td nowrap="true" align="right">400 ms
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.gtech.suite.BeforeAppEx_afterSuite_byStatus_passed_PASS4_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Start time: </b>16:01:39
+                     </div>
+                     <div>
+                        <b>End time: </b>16:01:39
+                     </div>
+                     <div>
+                        <b>Duration: </b>400 ms
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="com.gtech.miscellaneous.testcases.WebBrowser_game_openBrowser_byStatus_passed_PASS5_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.gtech.miscellaneous.testcases.WebBrowser_game_openBrowser_byStatus_passed_PASS5_details')">game_openBrowser</a>
+               </td>
+               <td nowrap="true">15:58:11</td>
+               <td nowrap="true" align="right">10s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.gtech.miscellaneous.testcases.WebBrowser_game_openBrowser_byStatus_passed_PASS5_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Parameters: </b>
+                        
+                        {parameters={url=http://www.google.com}, url={url=dksjfdsjkjflk}}
+                        
+                        
+                     </div>
+                     <div>
+                        <b>Start time: </b>15:58:11
+                     </div>
+                     <div>
+                        <b>End time: </b>15:58:22
+                     </div>
+                     <div>
+                        <b>Duration: </b>10s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="com.gtech.miscellaneous.testcases.WebBrowser_game_closeBrowser_byStatus_passed_PASS6_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.gtech.miscellaneous.testcases.WebBrowser_game_closeBrowser_byStatus_passed_PASS6_details')">game_closeBrowser</a>
+               </td>
+               <td nowrap="true">16:01:37</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.gtech.miscellaneous.testcases.WebBrowser_game_closeBrowser_byStatus_passed_PASS6_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Start time: </b>16:01:37
+                     </div>
+                     <div>
+                        <b>End time: </b>16:01:39
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                     <div>
+                        <b>Depends on groups:
+                           
+                        </b>
+                        <div>
+                               -
+                           Independent
+                        </div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+         </table>
+      </div>
+      <div id="testMethodsByClass">
+         <table class="testMethodsTable" cellpadding="0" cellspacing="0">
+            <tr>
+               <td colspan="4">
+                  <h3 style="display: inline;">com.gtech.miscellaneous.testcases.WebBrowser</h3>
+               </td>
+            </tr>
+            <tr class="methodsTableHeader">
+               <td width="100%">Name</td>
+               <td nowrap="true">Started</td>
+               <td nowrap="true">Duration</td>
+               <td>Exception</td>
+            </tr>
+            <tr id="com.gtech.miscellaneous.testcases.WebBrowser_game_openBrowser_byClass_PASS1_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.gtech.miscellaneous.testcases.WebBrowser_game_openBrowser_byClass_PASS1_details')">game_openBrowser</a>
+               </td>
+               <td nowrap="true">15:58:11</td>
+               <td nowrap="true" align="right">10s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.gtech.miscellaneous.testcases.WebBrowser_game_openBrowser_byClass_PASS1_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Parameters: </b>
+                        
+                        {parameters={url=http://www.google.com}, url={url=dksjfdsjkjflk}}
+                        
+                        
+                     </div>
+                     <div>
+                        <b>Start time: </b>15:58:11
+                     </div>
+                     <div>
+                        <b>End time: </b>15:58:22
+                     </div>
+                     <div>
+                        <b>Duration: </b>10s
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="com.gtech.miscellaneous.testcases.WebBrowser_game_closeBrowser_byClass_PASS2_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.gtech.miscellaneous.testcases.WebBrowser_game_closeBrowser_byClass_PASS2_details')">game_closeBrowser</a>
+               </td>
+               <td nowrap="true">16:01:37</td>
+               <td nowrap="true" align="right">2s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.gtech.miscellaneous.testcases.WebBrowser_game_closeBrowser_byClass_PASS2_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Start time: </b>16:01:37
+                     </div>
+                     <div>
+                        <b>End time: </b>16:01:39
+                     </div>
+                     <div>
+                        <b>Duration: </b>2s
+                        
+                     </div>
+                     <div>
+                        <b>Depends on groups:
+                           
+                        </b>
+                        <div>
+                               -
+                           Independent
+                        </div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+         </table>
+         <br></br>
+         <table class="testMethodsTable" cellpadding="0" cellspacing="0">
+            <tr>
+               <td colspan="4">
+                  <h3 style="display: inline;">com.gtech.portal.testcases.Login</h3>
+               </td>
+            </tr>
+            <tr class="methodsTableHeader">
+               <td width="100%">Name</td>
+               <td nowrap="true">Started</td>
+               <td nowrap="true">Duration</td>
+               <td>Exception</td>
+            </tr>
+            <tr id="com.gtech.portal.testcases.Login_game_DepositAccount_byClass_PASS1_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.gtech.portal.testcases.Login_game_DepositAccount_byClass_PASS1_details')">game_DepositAccount</a>
+               </td>
+               <td nowrap="true">16:00:46</td>
+               <td nowrap="true" align="right">31s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.gtech.portal.testcases.Login_game_DepositAccount_byClass_PASS1_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Parameters: </b>
+                        
+                        {button={account=My account, DAccount=Deposit Funds}, hyperlink={home=Bingo}}
+                        
+                        
+                     </div>
+                     <div>
+                        <b>Start time: </b>16:00:46
+                     </div>
+                     <div>
+                        <b>End time: </b>16:01:17
+                     </div>
+                     <div>
+                        <b>Duration: </b>31s
+                        
+                     </div>
+                     <div>
+                        <b>Depends on groups:
+                           
+                        </b>
+                        <div>
+                               -
+                           openBrowser
+                        </div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="com.gtech.portal.testcases.Login_game_SignOut_byClass_PASS2_row"
+                class="testMethodStatusPASS">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.gtech.portal.testcases.Login_game_SignOut_byClass_PASS2_details')">game_SignOut</a>
+               </td>
+               <td nowrap="true">16:01:17</td>
+               <td nowrap="true" align="right">20s
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.gtech.portal.testcases.Login_game_SignOut_byClass_PASS2_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Parameters: </b>
+                        
+                        {button={logout=Logout}, hyperlink={home=Bingo}}
+                        
+                        
+                     </div>
+                     <div>
+                        <b>Start time: </b>16:01:17
+                     </div>
+                     <div>
+                        <b>End time: </b>16:01:37
+                     </div>
+                     <div>
+                        <b>Duration: </b>20s
+                        
+                     </div>
+                     <div>
+                        <b>Depends on groups:
+                           
+                        </b>
+                        <div>
+                               -
+                           openBrowser
+                        </div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+         </table>
+         <br></br>
+         <table class="testMethodsTable" cellpadding="0" cellspacing="0">
+            <tr>
+               <td colspan="4">
+                  <h3 style="display: inline;">com.gtech.portal.testcases.Portal</h3>
+               </td>
+            </tr>
+            <tr class="methodsTableHeader">
+               <td width="100%">Name</td>
+               <td nowrap="true">Started</td>
+               <td nowrap="true">Duration</td>
+               <td>Exception</td>
+            </tr>
+            <tr id="com.gtech.portal.testcases.Portal_p_Combinations_step1_reg_byClass_FAIL1_row"
+                class="testMethodStatusFAIL">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.gtech.portal.testcases.Portal_p_Combinations_step1_reg_byClass_FAIL1_details')">p_Combinations_step1_reg</a>
+               </td>
+               <td nowrap="true">15:58:22</td>
+               <td nowrap="true" align="right">2m
+                  24s
+                  
+               </td>
+               <td nowrap="true">
+                  <a onclick="toggleDetailsVisibility('com.gtech.portal.testcases.Portal_p_Combinations_step1_reg_byClass_FAIL1_exception')">
+                     expected [Promo rrrrcode] but found [null]
+                     
+                  </a>
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.gtech.portal.testcases.Portal_p_Combinations_step1_reg_byClass_FAIL1_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Parameters: </b>
+                        
+                        {parameters={app=Express}, field={Mobile=798789797877, Password=password, Post Code=5LMTYQRI, Security answer=petshsh, Street=fgdg,
+                        House nr=4354353, City=hyderabad, Promo rrrrcode=fdfsdf, Telephone=79363928412, Login name=MRT_KIBMME, Email=MRT_HTEWEIbhup9@gmail.com,
+                        Nickname=MRT_BWMFBNIs, First name=MRT_IAEDNca, Last name=MRT_NEAAma}, dropdown={Country=UNITED KINGDOM, Gender=Male, Security
+                        question=Where did you go to school?, How did you hear about us=Friend, Nationality=UNITED KINGDOM}, date={month=Jul, day=3,
+                        year=1916}, button={sign=Sign Up Here, pla4Real=Play for real}, url={url=https://www.dailyexpressgames.co.uk/content/express/en.html},
+                        checkbox={18=*Confirm you are over 18 years, accept=I Accept the, keepmeUpdayed=Keep me updated with news}}
+                        
+                        
+                     </div>
+                     <div>
+                        <b>Start time: </b>15:58:22
+                     </div>
+                     <div>
+                        <b>End time: </b>16:00:46
+                     </div>
+                     <div>
+                        <b>Duration: </b>2m
+                        24s
+                        
+                     </div>
+                     <div>
+                        <b>Depends on groups:
+                           
+                        </b>
+                        <div>
+                               -
+                           openBrowser
+                        </div>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.gtech.portal.testcases.Portal_p_Combinations_step1_reg_byClass_FAIL1_exception"
+                       class="testMethodDetails">
+                     <pre style="padding: 5px; margin: 0;">expected [Promo rrrrcode] but found [null]</pre>
+                  </div>
+               </td>
+            </tr>
+         </table>
+         <br></br>
+         <table class="testMethodsTable" cellpadding="0" cellspacing="0">
+            <tr>
+               <td colspan="4">
+                  <h3 style="display: inline;">com.gtech.suite.BeforeAppEx</h3>
+               </td>
+            </tr>
+            <tr class="methodsTableHeader">
+               <td width="100%">Name</td>
+               <td nowrap="true">Started</td>
+               <td nowrap="true">Duration</td>
+               <td>Exception</td>
+            </tr>
+            <tr id="com.gtech.suite.BeforeAppEx_beforeSuite_byClass_PASS1_row"
+                class="testMethodStatusPASS testMethodStatusCONF">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.gtech.suite.BeforeAppEx_beforeSuite_byClass_PASS1_details')">beforeSuite</a>
+               </td>
+               <td nowrap="true">15:58:11</td>
+               <td nowrap="true" align="right">920 ms
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.gtech.suite.BeforeAppEx_beforeSuite_byClass_PASS1_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Parameters: </b>
+                        
+                        false
+                        
+                        ,
+                        
+                        chrome
+                        
+                        
+                     </div>
+                     <div>
+                        <b>Start time: </b>15:58:11
+                     </div>
+                     <div>
+                        <b>End time: </b>15:58:11
+                     </div>
+                     <div>
+                        <b>Duration: </b>920 ms
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+            <tr id="com.gtech.suite.BeforeAppEx_afterSuite_byClass_PASS2_row"
+                class="testMethodStatusPASS testMethodStatusCONF">
+               <td width="100%" class="firstMethodCell">
+                  <a onclick="toggleDetailsVisibility('com.gtech.suite.BeforeAppEx_afterSuite_byClass_PASS2_details')">afterSuite</a>
+               </td>
+               <td nowrap="true">16:01:39</td>
+               <td nowrap="true" align="right">400 ms
+                  
+               </td>
+               <td nowrap="true">
+                   
+                  
+               </td>
+            </tr>
+            <tr>
+               <td colspan="4" class="detailsBox">
+                  <div id="com.gtech.suite.BeforeAppEx_afterSuite_byClass_PASS2_details"
+                       class="testMethodDetails">
+                     <div>
+                        <b>Start time: </b>16:01:39
+                     </div>
+                     <div>
+                        <b>End time: </b>16:01:39
+                     </div>
+                     <div>
+                        <b>Duration: </b>400 ms
+                        
+                     </div>
+                  </div>
+               </td>
+            </tr>
+            <tr></tr>
+         </table>
+         <br></br>
+      </div>
+      <div style="margin-top: 15px; color: gray; text-align: center; font-size: 9px;">
+         POWERED-BY
+         
+         <a href="http://gtech/QMS/processes/Quality%20Systems/The%20Team/Quality%20Systems%20Team.aspx"
+            style="color: #8888aa;"
+            target="_blank">
+            GAME QA AUTOMATION TEAM
+            
+         </a>
+      </div>
+   </body>
+</html>

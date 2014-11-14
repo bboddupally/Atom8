@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<suite name="EN_Sites" verbose="1" preserve-order="true">
+
+
+ <parameter name="browser" value="chrome"/>
+  <parameter name="localhost" value="false"/>
+
+
+	<test name="BeforeAppEx" preserve-order="true">
+	<classes>
+			<class name="com.gtech.suite.BeforeAppEx"/>
+		</classes>
+	</test>
+
+ <test name="Chitchat" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="1"/>
+ 
+			</methods>
+			</class>
+		</classes>
+</test>  
+ 	
+	<test name="VIP Casino Club" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="2"/>
+ 
+			</methods>
+			</class>
+		</classes>
+</test>
+	
+
+		<test name="Castle/english" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="3"/>
+			
+ 
+			</methods>
+			</class>
+		</classes>
+</test>
+	
+	<test name="BUTLINS" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="7"/>
+			
+ 
+			</methods>
+			</class>
+		</classes>
+</test>
+	
+	<test name="Slotsngames_Iw" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="9"/>
+			
+ 
+			</methods>
+			</class>
+		</classes>
+</test> 
+	<test name="Royalgames" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="10"/>
+			
+ 
+			</methods>
+			</class>
+		</classes>
+</test>
+	<test name="Club3000bingo" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="11"/>
+			
+ 
+			</methods>
+			</class>
+		</classes>
+</test>
+	
+	 <test name="Bidbingo" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="13"/>
+			
+ 
+			</methods>
+			</class>
+		</classes>
+</test>
+	
+	
+		<test name="Express" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="14"/>
+			
+ 
+			</methods>
+			</class>
+		</classes>
+</test>
+	
+	
+			<test name="Stargames" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="15"/>
+			
+ 
+			</methods>
+			</class>
+		</classes>
+</test> 
+
+	
+			<test name="Carlton" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="16"/>
+			
+ 
+			</methods>
+			</class>
+		</classes>
+</test>   
+	
+			<test name="Okbingo" preserve-order="true">
+<groups>
+			<dependencies>
+		<group name="Independent" 		depends-on="openBrowser" />	
+		<group name="closeBrowser" 	depends-on="Independent" />
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="Independent" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+				<class name="com.gtech.portal.testcase.Portal">
+			<methods>
+          <include name="p_Combinations_step1_reg" invocation-numbers="17"/>
+			
+ 
+			</methods>
+			</class>
+		</classes>
+</test> 
+	
+</suite>
+<!-- Suite -->

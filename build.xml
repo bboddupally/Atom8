@@ -1,4 +1,4 @@
-<project name="verify-demo" default="run-tests" basedir=".">
+<project name="verify-dem" default="run-tests" basedir=".">
 	
 	
 	<property name="testng.report.dir" value="${basedir}/target/surefire-reports" />

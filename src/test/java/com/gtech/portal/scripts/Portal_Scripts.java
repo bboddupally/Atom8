@@ -42,226 +42,54 @@ public class Portal_Scripts {
 	
 	public void p_Combinations_step1_reg(
 			LinkedHashMap<String, LinkedHashMap<String, String>> credentials) {
-		/*driver =SelectingWebDriver.getInstance();
-		autoutil=Util4Modules.getInstance();
-		dd= new DataSource();*/
-		System.out.println(dataSheet(credentials,"url","url"));
-		System.out.println("****************");
-		System.out.println(dataSheet(credentials,"parameters","app"));
-		
-		
-		
-		if((dataSheet(credentials,"parameters","app").equals("VIP Casino Club")) || (dataSheet(credentials,"parameters","app").equals("Chitchat"))){
-			autoutil.openBrowser(dataSheet(credentials,"url","url"));
-			autoutil.waitTime(5000);
 
-			autoutil.clickButton(dataSheet(credentials,"button","sign"),propFile("link"));
-			autoutil.waitTime(3000);
-			for(Entry<String, String> entry : dataSheet(credentials, "field").entrySet())
-				autoutil.verifyingLabelsAndTextTheFields(entry.getKey(), entry.getValue());
-			
-			autoutil.clickButton(dataSheet(credentials,"button","step2"),propFile("button"));
-
-			
-			String x="CAt_"+autoutil.randomString1();
-
-			for(Entry<String, String> entry : dataSheet(credentials, "field2").entrySet()){
-				if(!entry.getValue().equals("")){
-					autoutil.verifyingLabelsAndTextTheFields(entry.getKey(), x+entry.getValue());
-					if(entry.getKey().equals("Login name *") || entry.getKey().equals("Inloggningsnamn") )
-					System.out.println(x+entry.getValue() +"for app "+dataSheet(credentials,"parameters","app")+" and Url "+ dataSheet(credentials,"url","url"));
-				}else{
-					autoutil.verifyingLabelsAndTextTheFields(entry.getKey(),entry.getValue());
-
-				}
-			}
-		
-			autoutil.waitTime(30);
-			
-			
-			// driver.findElement(By.id("18+-0")).click();
-		
-			  //  driver.findElement(By.id("tAndC")).click();
-			//driver.findElement(By.xpath("//div/input[@id='18+-0']")).click();
-			//tAndC
-
-			driver.findElement(By.xpath("//label[contains(.,'Confirm you are over 18 years')]/preceding-sibling::input")).click();
-			driver.findElement(By.xpath("//label[contains(.,'Confirm you are over 18 years')]/preceding-sibling::input")).click();
-
-			autoutil.waitTime(30);
-			driver.findElement(By.xpath("//label[contains(.,'Sign up for newsletter')]/preceding-sibling::*")).click();
-			autoutil.waitTime(30);
-			
-		   // driver.findElement(By.id("tAndC")).click();
-		    
-			driver.findElement(By.xpath("//label[contains(.,'I agree to the Terms and Conditions')]/preceding-sibling::*")).click();
-			driver.findElement(By.xpath("//label[contains(.,'I agree to the Terms and Conditions')]/preceding-sibling::*")).click();
-
-//driver.findElement(By.xpath("//div/input[@id='tAndC']")).click();
-			//
-			//
-			
-			autoutil.clickButton("//div/input[@id='submit' and @value='Deposit Now']");
-
-			cashier();
-			
-		}else{
-			
-		
-		
 		autoutil.openBrowser(dataSheet(credentials,"url","url"));
 		autoutil.waitTime(8000);
 		autoutil.clickButton(dataSheet(credentials,"button","sign"),propFile("link"));
 		autoutil.waitTime(3000);
 		for(Entry<String, String> entry : dataSheet(credentials, "dropdown").entrySet())
 		autoutil.dropDown(entry.getKey(), entry.getValue());
-		if(dataSheet(credentials, "date")!=null)
-		for(Entry<String, String> entry : dataSheet(credentials, "date").entrySet()){
-			if(entry.getKey().equals("day")){
-				autoutil.selectDate(entry.getKey(), Integer.toString(new Random().nextInt(31-1) + 1));
-
-			}else if(entry.getKey().equals("year")){
-				autoutil.selectDate(entry.getKey(), Integer.toString(new Random().nextInt(1996-1900) + 1900));
-
-			}else{
-				autoutil.selectDate(entry.getKey(), entry.getValue());
-
-			}
-			
-
-		}
+		for(Entry<String, String> entry : dataSheet(credentials, "date").entrySet())
+		autoutil.selectDate(entry.getKey(), entry.getValue());
 		for(Entry<String, String> entry : dataSheet(credentials, "field").entrySet())
 		autoutil.verifyingLabelsAndTextTheFields(entry.getKey(), entry.getValue());
-		String x="CAt_"+autoutil.randomString1();
-		for(Entry<String, String> entry : dataSheet(credentials, "field2").entrySet()){
-			if(!entry.getValue().equals("")){
-				autoutil.verifyingLabelsAndTextTheFields(entry.getKey(), x+entry.getValue());
-				if(entry.getKey().equals("Login name") || entry.getKey().equals("Användarnamn") ||entry.getKey().equals("Inloggningsnamn") ){
-					System.out.println(x+entry.getValue() +"  for app "+dataSheet(credentials,"parameters","app"));
-					System.out.println(" and Url "+ dataSheet(credentials,"url","url"));
-				
-				}
-				
-			}else{
-				autoutil.verifyingLabelsAndTextTheFields(entry.getKey(),entry.getValue());
-
-			}
-		}
-		for(Entry<String, String> entry : dataSheet(credentials, "label2").entrySet()){
-			autoutil.verifyingLabelsAndTextTheFields(entry.getKey(), randomString()+"11");
-		}
-	//	autoutil.verifyingLabelsAndTextTheFields("Post Code", randomString());
-
-		
-		for(Entry<String, String> entry : dataSheet(credentials, "select2").entrySet()){
-			autoutil.verifyingLabelsAndTextTheFields(entry.getKey(), autoutil.randomString1());
-		}
 		for(Entry<String, String> entry : dataSheet(credentials, "checkbox").entrySet())
 		autoutil.selectcheckBox(entry.getValue());
 		autoutil.clickButton(dataSheet(credentials,"button","pla4Real"),propFile("link"));
-		if(dataSheet(credentials, "label")!=null){
-			for(Entry<String, String> entry : dataSheet(credentials, "label").entrySet()){
-				if(!autoutil.doTheyExists(entry.getValue(),propFile("span"))){
-					
-					
-					//autoutil.isTitleExist("Banking");
-					
-					cashier();				}
-				//autoutil.closeBrowser();
-			}
-		}else{
-			cashier();
-		}
-		
-		
-		
-		}
-	    
-	    
-	//   Set<String> set= driver.getWindowHandles();
-	/*   for (String string : set) {
-		System.out.println(string);
-	}*/
-	   // System.out.println(" I am in Chasier page");
-	//  autoutil.waitTime(3000);
-	    
-	  
-	   // driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
-
-	  
-	  // WebDriverWait wait2 = new WebDriverWait(driver, 80);
-	// wait2.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(@title, 'Register Neteller')]")));
-	   //  clickButton("//a[contains(@title, 'Register Neteller')]");
-	   //  clickButton("//a[contains(@title, 'Register Neteller')]");
-	    // autoutil.closeBrowser();
-	   ///html/body/div[2]/div[3]
-	     
-	     //  /html/body/div[2]/div[3]/iframe
-	     
-	  // autoutil.closeBrowser();
-	  //  driver.findElement(By.linkText("registrera")).click();
-	  //  driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-	    // ERROR: Caught exception [ERROR: Unsupported command [selectWindow | name=fbMainContainer | ]]
-	  //  driver.findElement(By.id("fbInspectButton")).click();
-	    // ERROR: Caught exception [ERROR: Unsupported command [selectWindow | null | ]]
-	  //  driver.findElement(By.linkText("registrera")).click();
-		
-	/*if(waitUntillExist("//a[@class='paymenticon payment-credit-cards']")){
-		Asserting.assertEquals(null, dataSheet(credentials,"label","test"));
-	}
-	driver.close();
-	driver =null;*/
-		
-	/* WebDriverWait wait = new WebDriverWait(driver, 60);
-    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//title")));
-
-     System.out.println(driver.findElement(By.xpath("//title")).getText());
-     System.out.println(driver.findElement(By.xpath("//title")).getAttribute("innerHTML"));
+		cashier();
 	
-	*/
+		}
+
 	
-	/*	autoutil.waitTime(30000);
-		//for(Entry<String, String> entry : dataSheet(credentials, "toolbar").entrySet())
-		//autoutil.isHeaderExists(propFile("header"), entry.getValue());
-		if(dataSheet(credentials, "label")!=null){
-			for(Entry<String, String> entry : dataSheet(credentials, "label").entrySet()){
-				//if(!autoutil.doTheyExists(entry.getValue(),propFile("span"))){
-				//	driver.findElement(By.xpath("//h2[contains(.,'"+entry.getValue()+"')]")).isDisplayed();
-//System.out.println(driver.findElement(By.xpath("//h2[contains(.,'"+entry.getValue()+"')]")).isDisplayed());
-				autoutil.waitTime(20000);
-			    driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-					autoutil.isHeaderExists(dataSheet(credentials,"toolbar","header1"),propFile("span"));
-				//}
-				autoutil.closeBrowser();
-			}
-		}else{
-			autoutil.waitTime(10000);
-			System.out.println(dataSheet(credentials, "label"));
-			autoutil.waitTime(20000);
+	
+	
 
-			autoutil.isHeaderExists(dataSheet(credentials,"toolbar","header1"),propFile("span"));
-
-		}*/
-		//autoutil.
-		
-	//	driver.
-		//autoutil.closeCookies();
-		//autoutil.doTheyExists(dataSheet(credentials,"label","header1"),propFile("span"));
-		
-		//autoutil.closeBrowser();
-	}
-
-	private void cashier() {
+	public void cashier() {
 		autoutil.waitTime(30000);
-		
-		//autoutil.isTitleExist("Banking");
-		
-		WebDriverWait wait = new WebDriverWait(driver, 180);
+		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.titleContains("Cashier"));
 		System.out.println(" I am in Chasier page");
+				
 		autoutil.waitTime(3000);
 		driver.switchTo().frame(driver.findElement(By.tagName("iframe")));
-		clickButton("//a[contains(@title, 'Register Neteller')]");
+		if(autoutil.isExists("//a[contains(@title, 'Registrera Neteller-konto')]")){
+			clickButton("//a[contains(@title, 'Registrera Neteller-konto')]");
+		}else{
+			clickButton("//a[contains(@title, 'Register Neteller')]");
+
+		}
+		
+		
+		List<WebElement> el =driver.findElements(By.xpath("//span[contains(.,'Bonus')]"));
+		if(!el.isEmpty()){
+		for (WebElement webElement : el) {
+			webElement.click();
+			System.out.println(webElement.getText());
+			break;
+			}
+		}
+		driver.switchTo().defaultContent();
+		
 	}
 
 	
@@ -327,9 +155,6 @@ public class Portal_Scripts {
 	
 	public void p_Reg_play_for_Free(
 			LinkedHashMap<String, LinkedHashMap<String, String>> credentials) throws MalformedURLException {
-		System.out.println(dataSheet(credentials,"url","url"));
-		System.out.println("****************");
-		System.out.println(dataSheet(credentials,"parameters","app"));
 
 		autoutil.openBrowser(dataSheet(credentials,"url","url"));
 		autoutil.waitTime(8000);
@@ -337,47 +162,31 @@ public class Portal_Scripts {
 		autoutil.waitTime(3000);
 		for(Entry<String, String> entry : dataSheet(credentials, "dropdown").entrySet())
 		autoutil.dropDown(entry.getKey(), entry.getValue());
-		if(dataSheet(credentials, "date")!=null)
 		for(Entry<String, String> entry : dataSheet(credentials, "date").entrySet())
 		autoutil.selectDate(entry.getKey(), entry.getValue());
 		for(Entry<String, String> entry : dataSheet(credentials, "field").entrySet())
 		autoutil.verifyingLabelsAndTextTheFields(entry.getKey(), entry.getValue());
-		String x="cat_"+autoutil.randomString1();
-		for(Entry<String, String> entry : dataSheet(credentials, "field2").entrySet()){
-			autoutil.verifyingLabelsAndTextTheFields(entry.getKey(), x+entry.getValue());
-			System.out.println(x+entry.getValue());
-		}
-			
 		for(Entry<String, String> entry : dataSheet(credentials, "checkbox").entrySet())
 		autoutil.selectcheckBox(entry.getValue());
 		autoutil.clickButton(dataSheet(credentials,"button","pla4Real"),propFile("link"));
-		//autoutil.isTitleExist("Banking");
-		//autoutil.waitTime(30000);
-		  driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-		  
-		  WebDriverWait wait = new WebDriverWait(driver, 180);
-			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(.,'You have been registered successfully')]")));
-		
-		//for(Entry<String, String> entry : dataSheet(credentials, "toolbar").entrySet())
-		//autoutil.isHeaderExists(propFile("header"), entry.getValue());
-	/*	if(dataSheet(credentials, "label")!=null){
-			for(Entry<String, String> entry : dataSheet(credentials, "label").entrySet()){
-				if(!autoutil.doTheyExists(entry.getValue(),propFile("span"))){
-					autoutil.isHeaderExists(dataSheet(credentials,"toolbar","header1"),propFile("span"));
-				}
-				//autoutil.closeBrowser();
-			}
-		}else{
-			autoutil.waitTime(10000);
-			autoutil.isHeaderExists(dataSheet(credentials,"toolbar","header1"),propFile("span"));
-		}*/
-		
-		//autoutil.closeCookies();
-		//autoutil.doTheyExists(dataSheet(credentials,"label","header1"),propFile("span"));
-		
-		//autoutil.closeBrowser();
-	}
+		cashier();
+	
+		}
 
+	//p_Reg_play_Payments
+
+	public void p_Reg_play_Payments(
+			LinkedHashMap<String, LinkedHashMap<String, String>> credentials) {
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
 	
 	public void p_Reg_play_for_Real(
 			LinkedHashMap<String, LinkedHashMap<String, String>> credentials) {

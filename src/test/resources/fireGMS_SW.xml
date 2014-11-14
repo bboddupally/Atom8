@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<suite name="Suite" verbose="1" preserve-order="true">
+<suite name="SW_Sites" verbose="1" preserve-order="true">
  <parameter name="browser" value="chrome"/>
   <parameter name="localhost" value="false"/>
 
-
+ 
 	<test name="BeforeAppEx" preserve-order="true">
 	
 	
@@ -13,7 +13,7 @@
 	</test>
 
 
-<!--  	<test name="Caliberswe" preserve-order="true">
+ 	<test name="Caliberswe" preserve-order="true">
 <groups>
 			<dependencies>
 		<group name="Independent" 		depends-on="openBrowser" />	
@@ -36,7 +36,7 @@
 			</methods>
 			</class>
 		</classes>
-	</test> -->
+	</test>   
 
 	<test name="Lycke" preserve-order="true">
 <groups>
@@ -54,14 +54,14 @@
 			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
 				<class name="com.gtech.portal.testcase.Portal">
 			<methods>
-          <include name="p_Combinations_step1_reg" invocation-numbers="0"/>
+          <include name="p_Combinations_step1_reg" invocation-numbers="4"/>
 			
  
 			</methods>
 			</class>
 		</classes>
 </test>
-	<!-- <test name="Happybingo" preserve-order="true">
+ <test name="Happybingo" preserve-order="true">
 <groups>
 			<dependencies>
 		<group name="Independent" 		depends-on="openBrowser" />	
@@ -130,7 +130,7 @@
 			</methods>
 			</class>
 		</classes>
-</test>
+</test> 
 	
 	<test name="Royalgamesswe" preserve-order="true">
 <groups>
@@ -155,7 +155,7 @@
 			</class>
 		</classes>
 </test>
- -->
+ 
 	
 </suite>
 <!-- Suite -->

@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.gtech.portal.implementation.Login_Implementation;
+import com.gtech.portal.scripts.Login_Implementation;
 import com.gtech.util.DataSource;
 
 /**
@@ -48,12 +48,12 @@ public class Login {
 	@DataProvider
 	public Object[][] DataProvider4Iterations(Method m){
 		Object[][] object =null;
-		object =dd.dataDrive4Iteration(m.getName());
+		object =dd.dataDrive(m.getName());
 		return object;
 	}
 	
 
-@Test(dataProvider="DataProvider4Iterations",priority=1,groups = { "smokeTest" ,"signIn"})
+@Test(dataProvider="DataProvider",priority=1,groups = { "smokeTest" ,"Independent"})
 	public void game_SignIn(
 			LinkedHashMap<String, LinkedHashMap<String, String>> credentials) {
 	getInstance();login.game_SignIn(credentials);
@@ -61,7 +61,7 @@ public class Login {
 
 
 
-@Test(dataProvider="DataProvider",priority=1,groups = { "smokeTest" ,"signIn"})
+@Test(dataProvider="DataProvider",priority=1,groups = { "Independent" ,"signIn"})
 public void game_SignOut(
 		LinkedHashMap<String, LinkedHashMap<String, String>> credentials) {
 getInstance();login.game_SignOut(credentials);
@@ -74,10 +74,17 @@ getInstance();login.game_EditAccount(credentials);
 }
 
 
-@Test(dataProvider="DataProvider",priority=1,groups = { "smokeTest" ,"signIn"})
+@Test(dataProvider="DataProvider",priority=1,groups = { "Independent" ,"signIn"})
 public void game_DepositAccount(
 		LinkedHashMap<String, LinkedHashMap<String, String>> credentials) {
-getInstance();login.game_EditAccount(credentials);
+getInstance();login.game_DepositAccount(credentials);
 }
 
+
+
+@Test(dataProvider="DataProvider",priority=1,groups = { "Independent" ,"signIn"})
+public void olg_Register(
+		LinkedHashMap<String, LinkedHashMap<String, String>> credentials) {
+getInstance();login.olg_Register(credentials);
+}
 }

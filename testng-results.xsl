@@ -722,6 +722,10 @@
             <html>
                 <xsl:call-template name="htmlHead"/>
                 <body>
+                
+                <p>Download Excelsheet:
+			<input type="button" value="Excel" OnClick	="downloadsalesreport();"/></p>
+                
                     <table width="100%" style="font-size: 16px; margin-bottom: 10px;" cellspacing="1">
                         <tr>
                             <td width="100%">
