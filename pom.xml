@@ -15,11 +15,11 @@
 	<version>8.7</version>
 </dependency>
 
-<dependency>
+<!-- <dependency>
 	<groupId>net.sf.saxon</groupId>
 	<artifactId>Saxon-HE</artifactId>
 	<version>9.4</version>
-</dependency>
+</dependency> -->
 
 		<dependency>
 			<groupId>net.sourceforge.jexcelapi</groupId>
@@ -95,13 +95,13 @@
 			<systemPath>${basedir}/lib/reaper1.4.jar</systemPath>
 		</dependency>
 		
-		<dependency>
+	<!-- 	<dependency>
 			<groupId>LIB_NAME1</groupId>
 			<artifactId>LIB_NAM1E</artifactId>
 			<version>1.0.0</version>
 			<scope>system</scope>
 			<systemPath>${basedir}/lib/SaxonLiaison.jar</systemPath>
-		</dependency>
+		</dependency> -->
 		
 	
 		<dependency>

@@ -2,8 +2,8 @@
 <suite name="EN_Sites" verbose="1" preserve-order="true">
 
 
- <parameter name="browser" value="chrome"/>
-  <parameter name="localhost" value="false"/>
+ <parameter name="browser" value="firefox"/>
+  <parameter name="localhost" value="true"/>
 
 
 	<test name="BeforeAppEx" preserve-order="true">
@@ -11,8 +11,7 @@
 			<class name="com.gtech.suite.BeforeAppEx"/>
 		</classes>
 	</test>
-
-<!-- 	<test name="Okbingo" preserve-order="true">
+<!--  	<test name="Okbingo" preserve-order="true">
 <groups>
 			<dependencies>
 		<group name="Independent" 		depends-on="openBrowser" />	
@@ -42,8 +41,8 @@
 			</class>
 		</classes>
 </test> 
- -->
 
+ -->
 
 
 

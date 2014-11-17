@@ -15,6 +15,8 @@
 		
 	<target name="run">
 		<antcall target="run-tests"/>
+		<antcall target="check"/>
+		<antcall target="deldir"/>
 	
 	</target>
 		
@@ -37,8 +39,6 @@
 	
 	<target name="run-tests" >
 
-	
-
 		<delete dir="${basedir}/testng-xslt">
 		</delete>
 		<mkdir dir="${basedir}/testng-xslt">
@@ -53,26 +53,27 @@
 			<classpath refid="runpath">
 			</classpath>
 		</xslt>
-		
-		<copy todir="${basedir}/testng-xslt/ScreenShot" >
-			<fileset dir="${basedir}/src/test/resources/Screenshot" includes="**"/>
-		</copy>
 
-		<mkdir dir="${basedir}/test-output/ScreenShot">
-				</mkdir>
-		<copy todir="${basedir}/test-output/ScreenShot" >
-					<fileset dir="${basedir}/ScreenShot" includes="**"/>
-				</copy>
-		
-		<copy file="${testng.report.dir}/emailable-report.html" todir="${basedir}/testng-xslt"/>
-
-	
-		
-		
 	</target>
 	
+	<target name="check">
+			  <condition property="deldir">
+			    <available file="${basedir}/testng-xslt/ScreenShot" type="dir"/>
+			  </condition>
+			 </target>
+			
+	<target name="deldir" depends="check" if="deldir">
+				<copy todir="${basedir}/testng-xslt/ScreenShot" >
+							<fileset dir="${basedir}/src/test/resources/Screenshot" includes="**"/>
+						</copy>
 
+						<mkdir dir="${basedir}/test-output/ScreenShot">
+								</mkdir>
+						<copy todir="${basedir}/test-output/ScreenShot" >
+									<fileset dir="${basedir}/ScreenShot" includes="**"/>
+								</copy>
+						
+						<copy file="${testng.report.dir}/emailable-report.html" todir="${basedir}/testng-xslt"/>
+			 </target>
 
-
-	
 </project>
